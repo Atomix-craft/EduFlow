@@ -2,7 +2,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export default function Contact() {
   return (
@@ -19,7 +18,6 @@ export default function Contact() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="/features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                <a href="/#portals" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portals</a>
                 <a href="/#screenshots" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Screenshots</a>
                 <a href="/pricing" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
                 <a href="/help" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Help</a>
@@ -252,61 +250,55 @@ export default function Contact() {
             </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                How quickly can we get started with EduFLow?
-              </AccordionTrigger>
-              <AccordionContent>
+          <div className="space-y-6">
+            {/* FAQ Item 1 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">How quickly can we get started with EduFLow?</h3>
+              <p className="text-gray-600">
                 Most institutions can be up and running within 2-4 weeks, depending on the complexity of your setup and data migration requirements. Our team will work closely with you to ensure a smooth transition.
-              </AccordionContent>
-            </AccordionItem>
+              </p>
+            </div>
 
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                Do you offer training for our staff?
-              </AccordionTrigger>
-              <AccordionContent>
+            {/* FAQ Item 2 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Do you offer training for our staff?</h3>
+              <p className="text-gray-600">
                 Yes! We provide comprehensive training sessions for administrators, teachers, and students, along with detailed documentation and ongoing support. Training can be conducted on-site or virtually.
-              </AccordionContent>
-            </AccordionItem>
+              </p>
+            </div>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-                Can EduFLow integrate with our existing systems?
-              </AccordionTrigger>
-              <AccordionContent>
+            {/* FAQ Item 3 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can EduFLow integrate with our existing systems?</h3>
+              <p className="text-gray-600">
                 Absolutely. EduFLow offers robust API integration capabilities and can connect with most existing educational and administrative systems including SIS, LMS, and HR systems.
-              </AccordionContent>
-            </AccordionItem>
+              </p>
+            </div>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                What kind of support do you provide?
-              </AccordionTrigger>
-              <AccordionContent>
+            {/* FAQ Item 4 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What kind of support do you provide?</h3>
+              <p className="text-gray-600">
                 We offer 24/7 technical support, dedicated account managers, comprehensive documentation, and regular system updates and improvements. Support is available via phone, email, and live chat.
-              </AccordionContent>
-            </AccordionItem>
+              </p>
+            </div>
 
-            <AccordionItem value="item-5">
-              <AccordionTrigger>
-                Is my data secure with EduFLow?
-              </AccordionTrigger>
-              <AccordionContent>
+            {/* FAQ Item 5 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is my data secure with EduFLow?</h3>
+              <p className="text-gray-600">
                 Yes, we take data security very seriously. EduFLow uses enterprise-grade encryption, complies with GDPR and other privacy regulations, and undergoes regular security audits.
-              </AccordionContent>
-            </AccordionItem>
+              </p>
+            </div>
 
-            <AccordionItem value="item-6">
-              <AccordionTrigger>
-                Can I customize EduFLow for my institution's needs?
-              </AccordionTrigger>
-              <AccordionContent>
+            {/* FAQ Item 6 */}
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I customize EduFLow for my institution's needs?</h3>
+              <p className="text-gray-600">
                 Absolutely! EduFLow is highly customizable and can be tailored to meet your specific institutional requirements, workflows, and branding needs.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

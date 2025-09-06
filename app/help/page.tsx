@@ -13,7 +13,6 @@ export default function Help() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="/features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                <a href="/#portals" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Portals</a>
                 <a href="/screenshots" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Screenshots</a>
                 <a href="/pricing" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
                 <a href="/help" className="text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Help</a>

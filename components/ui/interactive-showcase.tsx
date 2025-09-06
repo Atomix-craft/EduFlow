@@ -15,7 +15,7 @@ const features: Feature[] = [
   {
     id: 'admin',
     name: 'Admin Dashboard',
-    image: '/screenshot-1.png',
+    image: '/admin-dash.png',
     description: 'Comprehensive overview of academic operations, system analytics, and management tools.',
     features: [
       'Academic structure & curriculum management',
@@ -33,7 +33,7 @@ const features: Feature[] = [
   {
     id: 'student',
     name: 'Student Portal',
-    image: '/screenshot-2.png',
+    image: '/student-portal.png',
     description: 'Personalized dashboard with course management, timetable, and academic tools.',
     features: [
       'Personalized dashboard & announcements',
@@ -51,7 +51,7 @@ const features: Feature[] = [
   {
     id: 'teacher',
     name: 'Teacher Portal',
-    image: '/screenshot-3.png',
+    image: '/teacher-portal.png',
     description: 'Teaching tools, attendance marking, content management, and student interaction.',
     features: [
       'Teaching schedule & class management',
@@ -69,7 +69,7 @@ const features: Feature[] = [
   {
     id: 'timetable',
     name: 'Timetable Management',
-    image: '/screenshot-4.png',
+    image: '/attandance.png',
     description: 'Automated scheduling with conflict resolution and optimization algorithms.',
     features: [
       'Automated timetable generation',
@@ -87,7 +87,7 @@ const features: Feature[] = [
   {
     id: 'exam',
     name: 'Exam Management',
-    image: '/screenshot-5.png',
+    image: '/exam-management.png',
     description: 'Complete exam lifecycle from scheduling to result publication and analysis.',
     features: [
       'Exam scheduling & room assignment',
@@ -104,8 +104,8 @@ const features: Feature[] = [
   },
   {
     id: 'analytics',
-    name: 'Analytics Dashboard',
-    image: '/screenshot-6.png',
+    name: 'LMS Reports',
+    image: '/LMS-reports.png',
     description: 'Comprehensive insights and reporting for data-driven decision making.',
     features: [
       'Performance analytics & trends',
@@ -173,8 +173,11 @@ export function InteractiveShowcase() {
             <div className="relative rounded-2xl overflow-hidden">
               {/* Background Blurred Image */}
               <div 
-                className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110 transition-all duration-500 min-h-96"
-                style={{ backgroundImage: `url(${activeFeature.image})` }}
+                className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110 transition-all duration-700 ease-in-out min-h-96"
+                style={{ 
+                  backgroundImage: `url(${activeFeature.image})`,
+                  transition: 'background-image 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
               ></div>
               
               {/* Overlay */}
@@ -186,9 +189,9 @@ export function InteractiveShowcase() {
                   {/* Amazing Border Effect */}
                   <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
                   <div className="bg-white rounded-2xl p-2 shadow-2xl">
-                    <div className="relative overflow-hidden rounded-xl">
+                    <div className="relative overflow-hidden rounded-xl" style={{ height: '500px' }}>
                       {imageError === activeFeature.image ? (
-                        <div className="w-full h-64 bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center rounded-xl">
+                        <div className="w-full h-full bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center rounded-xl">
                           <div className="text-center">
                             <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -203,8 +206,15 @@ export function InteractiveShowcase() {
                         <img 
                           src={activeFeature.image} 
                           alt={activeFeature.name}
-                          className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-500 hover:scale-105"
-                          style={{ maxHeight: '600px', objectFit: 'contain' }}
+                          className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-700 ease-in-out"
+                          style={{ 
+                            maxHeight: '600px', 
+                            objectFit: activeFeature.id === 'analytics' ? 'contain' : 'cover',
+                            objectPosition: activeFeature.id === 'analytics' ? 'center' : 'top left',
+                            transform: activeFeature.id === 'analytics' ? 'scale(1)' : 'scale(1.4)',
+                            transformOrigin: 'top left',
+                            transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
+                          }}
                           onError={() => setImageError(activeFeature.image)}
                           onLoad={() => setImageError(null)}
                         />

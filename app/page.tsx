@@ -77,20 +77,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-              <div className="text-gray-600">Educational Institutions</div>
+              <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">50+</div>
+              <div className="text-gray-600 text-lg">Features Available</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">50K+</div>
-              <div className="text-gray-600">Active Students</div>
+              <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">99.9%</div>
+              <div className="text-gray-600 text-lg">System Reliability</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">10K+</div>
-              <div className="text-gray-600">Faculty Members</div>
+              <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">24/7</div>
+              <div className="text-gray-600 text-lg">Support Available</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime Guarantee</div>
+              <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">100%</div>
+              <div className="text-gray-600 text-lg">Mobile Responsive</div>
             </div>
           </div>
         </div>
@@ -409,83 +409,53 @@ export default function Home() {
         <InteractiveShowcase />
       </section>
 
-      {/* Testimonials Section */}
+      {/* Launch Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Customers Say
+              Why Choose EduFLow for Your Institution?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Join hundreds of educational institutions that trust EduFLow to streamline their operations.
+              Be among the first to experience the next generation of education management technology.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-purple-600 font-semibold text-lg">JD</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Dr. John Davis</h4>
-                  <p className="text-gray-600 text-sm">Vice Chancellor, Tech University</p>
-                </div>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl border border-purple-200">
+              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-              <p className="text-gray-700 italic">
-                "EduFLow has revolutionized our academic management. The automated timetable generation alone saves us 20 hours per week."
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Early Adopter Benefits</h3>
+              <p className="text-gray-700 text-center">
+                Get priority support, exclusive training sessions, and direct access to our development team during the launch phase.
               </p>
-              <div className="flex text-yellow-400 mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-blue-600 font-semibold text-lg">SM</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Sarah Miller</h4>
-                  <p className="text-gray-600 text-sm">Academic Director, Global College</p>
-                </div>
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
+              <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
-              <p className="text-gray-700 italic">
-                "The student portal is incredibly intuitive. Our students love the real-time notifications and easy access to their academic information."
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Proven Technology</h3>
+              <p className="text-gray-700 text-center">
+                Built with modern cloud architecture, advanced security protocols, and scalable infrastructure designed for educational institutions.
               </p>
-              <div className="flex text-yellow-400 mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-green-600 font-semibold text-lg">RK</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Prof. Raj Kumar</h4>
-                  <p className="text-gray-600 text-sm">Head of Department, Engineering College</p>
-                </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl border border-green-200">
+              <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                </svg>
               </div>
-              <p className="text-gray-700 italic">
-                "The exam management system is flawless. From scheduling to result publication, everything is automated and error-free."
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">Future-Ready Platform</h3>
+              <p className="text-gray-700 text-center">
+                Continuous updates, new feature releases, and AI-powered enhancements ensure your institution stays ahead of the curve.
               </p>
-              <div className="flex text-yellow-400 mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
             </div>
           </div>
         </div>

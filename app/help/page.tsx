@@ -208,7 +208,7 @@ export default function Help() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Live Chat</h3>
               <p className="text-gray-600 mb-6">
-                Chat with our support team in real-time during business hours (9 AM - 6 PM EST).
+                Chat with our support team in real-time during business hours (9 AM - 6 PM IST).
               </p>
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
                 Start Chat
@@ -226,8 +226,8 @@ export default function Help() {
               <p className="text-gray-600 mb-6">
                 Speak directly with our support team for urgent issues and complex problems.
               </p>
-              <a href="tel:+1-555-0123" className="text-green-600 hover:text-green-700 font-semibold">
-                +1 (555) 012-3456
+              <a href="tel:+919793440595" className="text-green-600 hover:text-green-700 font-semibold">
+                +91 9793440595
               </a>
             </div>
           </div>

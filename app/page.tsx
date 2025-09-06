@@ -1,4 +1,4 @@
-import { ImageGallery } from "@/components/ui/image-gallery"
+import { InteractiveShowcase } from "@/components/ui/interactive-showcase"
 
 export default function Home() {
   return (
@@ -404,20 +404,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Screenshots Section */}
-      <section id="screenshots" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              See EduFLow in Action
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore the intuitive interface and powerful features that make education management effortless.
-            </p>
-          </div>
-
-          <ImageGallery />
-        </div>
+      {/* Interactive Showcase Section */}
+      <section id="screenshots">
+        <InteractiveShowcase />
       </section>
 
       {/* Testimonials Section */}

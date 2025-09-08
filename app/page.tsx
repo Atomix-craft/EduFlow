@@ -173,7 +173,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Unified Dashboard</h3>
                 <p className="text-blue-100 text-lg leading-relaxed">
-                  Instantly switch between student, teacher, and admin views. One platform, multiple perspectives, seamless experience.
+                  Consolidate all academic data, analytics, and insights in one comprehensive view. Real-time monitoring, performance tracking, and data-driven decision making.
                 </p>
               </div>
             </div>

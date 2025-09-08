@@ -105,7 +105,7 @@ const features: Feature[] = [
   {
     id: 'analytics',
     name: 'LMS Reports',
-    image: '/lms-reports.png',
+    image: '/lms-analytics.png',
     description: 'Comprehensive insights and reporting for data-driven decision making.',
     features: [
       'Performance analytics & trends',

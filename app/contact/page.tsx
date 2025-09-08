@@ -1,10 +1,77 @@
+'use client';
+
+import { useState } from 'react';
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navigation } from "@/components/ui/navigation"
+import { sendContactEmail, validateForm, ContactFormData } from "@/lib/emailService"
 
 export default function Contact() {
+  const [formData, setFormData] = useState<ContactFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    institution: '',
+    role: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<string[]>([]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear errors when user starts typing
+    if (errors.length > 0) {
+      setErrors([]);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form
+    const validationErrors = validateForm(formData);
+    if (validationErrors.length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrors([]);
+
+    try {
+      const success = await sendContactEmail(formData);
+      
+      if (success) {
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          institution: '',
+          role: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        setErrors(['Failed to send message. Please try again or contact us directly.']);
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrors(['An unexpected error occurred. Please try again.']);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-white">
       <Navigation currentPage="contact" />
@@ -33,61 +100,109 @@ export default function Contact() {
                 <CardTitle className="text-3xl">Send us a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                {/* Success Message */}
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <p className="text-green-800 font-medium">Message sent successfully!</p>
+                    </div>
+                    <p className="text-green-700 text-sm mt-1">Thank you for contacting us. We'll get back to you soon.</p>
+                  </div>
+                )}
+
+                {/* Error Messages */}
+                {errors.length > 0 && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <div className="flex items-center mb-2">
+                      <svg className="w-5 h-5 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-red-800 font-medium">Please fix the following errors:</p>
+                    </div>
+                    <ul className="text-red-700 text-sm list-disc list-inside">
+                      {errors.map((error, index) => (
+                        <li key={index}>{error}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name
+                        First Name *
                       </label>
                       <Input
                         type="text"
                         id="firstName"
                         name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                         placeholder="John"
+                        required
                       />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                        Last Name
+                        Last Name *
                       </label>
                       <Input
                         type="text"
                         id="lastName"
                         name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                         placeholder="Doe"
+                        required
                       />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address
+                      Email Address *
                     </label>
                     <Input
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       placeholder="john.doe@university.edu"
+                      required
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="institution" className="block text-sm font-medium text-gray-700 mb-2">
-                      Institution Name
+                      Institution Name *
                     </label>
                     <Input
                       type="text"
                       id="institution"
                       name="institution"
+                      value={formData.institution}
+                      onChange={handleInputChange}
                       placeholder="University of Technology"
+                      required
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="role" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Role
+                      Your Role *
                     </label>
-                    <Select id="role" name="role">
+                    <Select 
+                      id="role" 
+                      name="role"
+                      value={formData.role}
+                      onChange={handleInputChange}
+                      required
+                    >
                       <option value="">Select your role</option>
                       <option value="administrator">Administrator</option>
                       <option value="dean">Dean</option>
@@ -100,21 +215,35 @@ export default function Contact() {
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message
+                      Message *
                     </label>
                     <Textarea
                       id="message"
                       name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       rows={6}
                       placeholder="Tell us about your institution's needs and how we can help..."
+                      required
                     />
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl"
                   >
-                    Send Message
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </div>
+                    ) : (
+                      'Send Message'
+                    )}
                   </button>
                 </form>
               </CardContent>

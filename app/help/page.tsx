@@ -1,12 +1,20 @@
 import { Navigation } from "@/components/ui/navigation"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 
 export default function Help() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation currentPage="help" />
 
+      {/* Breadcrumb */}
+      <div className="pt-20 pb-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ label: "Help" }]} />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">

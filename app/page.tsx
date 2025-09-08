@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <main id="main-content">
 
       {/* Hero Section */}
       <section className="pt-20 pb-20 bg-white relative overflow-hidden">
@@ -27,10 +28,10 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" aria-label="Start your free trial of CampusHub university management system">
                 Start Free Trial →
               </a>
-              <a href="/contact" className="border border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-4 px-8 rounded-lg transition-colors">
+              <a href="/contact" className="border border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-4 px-8 rounded-lg transition-colors" aria-label="Contact our sales team for more information">
                 Contact Sales
               </a>
             </div>
@@ -562,6 +563,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Resources Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Learn More About University Management Systems
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our comprehensive resources to understand how CampusHub can transform your educational institution.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Get Started Today</h3>
+              <p className="text-gray-600 mb-6">Experience the power of CampusHub with our 14-day free trial. No credit card required.</p>
+              <a href="/contact" className="text-purple-600 hover:text-purple-700 font-medium transition-colors">
+                Start Free Trial →
+              </a>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Frequently Asked Questions</h3>
+              <p className="text-gray-600 mb-6">Find answers to common questions about university management systems, implementation, and best practices.</p>
+              <a href="/faq" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+                View FAQ →
+              </a>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Feature Details</h3>
+              <p className="text-gray-600 mb-6">Explore comprehensive features including student information system, learning management system, and campus automation.</p>
+              <a href="/features" className="text-green-600 hover:text-green-700 font-medium transition-colors">
+                View Features →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 gradient-bg">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -637,6 +693,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      </main>
     </div>
   );
 }

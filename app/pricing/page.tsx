@@ -1,12 +1,50 @@
 import { Navigation } from "@/components/ui/navigation"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pricing - University Management System Plans | CampusHub",
+  description: "Affordable pricing plans for CampusHub university management system. Choose the perfect plan for your educational institution with student information system, LMS, and campus automation features.",
+  keywords: [
+    "university management system pricing",
+    "education management system cost",
+    "student information system pricing",
+    "learning management system pricing",
+    "campus management software pricing",
+    "university software pricing",
+    "college management system cost",
+    "education software pricing plans",
+    "university ERP pricing",
+    "campus automation pricing"
+  ],
+  openGraph: {
+    title: "CampusHub Pricing - University Management System Plans",
+    description: "Affordable pricing plans for comprehensive university management system with SIS, LMS, and campus automation features.",
+    images: [
+      {
+        url: '/admin-dashboard.png',
+        width: 1200,
+        height: 630,
+        alt: 'CampusHub University Management System Pricing',
+      },
+    ],
+  },
+}
 
 export default function Pricing() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation currentPage="pricing" />
 
+      {/* Breadcrumb */}
+      <div className="pt-20 pb-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ label: "Pricing" }]} />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Simple, Transparent

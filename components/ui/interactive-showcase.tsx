@@ -206,7 +206,7 @@ export function InteractiveShowcase() {
                       ) : (
                         <img 
                           src={activeFeature.image} 
-                          alt={activeFeature.name}
+                          alt={`${activeFeature.name} - CampusHub University Management System`}
                           className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-700 ease-in-out hover:scale-105"
                           style={{ 
                             maxHeight: '600px', 
@@ -217,6 +217,8 @@ export function InteractiveShowcase() {
                             transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
                             filter: 'drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1))'
                           }}
+                          loading="lazy"
+                          decoding="async"
                           onError={() => setImageError(activeFeature.image)}
                           onLoad={() => setImageError(null)}
                         />

@@ -13,12 +13,13 @@ export function Navigation({ currentPage }: NavigationProps) {
     { href: "/features", label: "Features" },
     { href: "/#screenshots", label: "Gallery" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/faq", label: "FAQ" },
     { href: "/help", label: "Help" },
     { href: "/contact", label: "Contact" }
   ]
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -49,6 +50,8 @@ export function Navigation({ currentPage }: NavigationProps) {
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-700 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-md p-2"
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

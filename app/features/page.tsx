@@ -1,12 +1,50 @@
 import { Navigation } from "@/components/ui/navigation"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Features - Complete University Management System | CampusHub",
+  description: "Explore CampusHub's comprehensive features including student information system (SIS), learning management system (LMS), timetable management, exam management, and campus automation for universities and colleges.",
+  keywords: [
+    "university management system features",
+    "education management system features",
+    "student information system features",
+    "learning management system features",
+    "timetable management features",
+    "exam management features",
+    "campus automation features",
+    "university software features",
+    "college management features",
+    "academic management features"
+  ],
+  openGraph: {
+    title: "CampusHub Features - Complete University Management System",
+    description: "Discover comprehensive education management system features including SIS, LMS, timetable management, exam management, and campus automation.",
+    images: [
+      {
+        url: '/admin-dashboard.png',
+        width: 1200,
+        height: 630,
+        alt: 'CampusHub University Management System Features',
+      },
+    ],
+  },
+}
 
 export default function Features() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation currentPage="features" />
 
+      {/* Breadcrumb */}
+      <div className="pt-20 pb-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ label: "Features" }]} />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Powerful Features for

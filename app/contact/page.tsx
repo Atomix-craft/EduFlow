@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Navigation } from "@/components/ui/navigation"
+import { Breadcrumb } from "@/components/ui/breadcrumb"
 import { sendContactEmail, validateForm, ContactFormData } from "@/lib/emailService"
 
 export default function Contact() {
@@ -76,8 +77,15 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Navigation currentPage="contact" />
 
+      {/* Breadcrumb */}
+      <div className="pt-20 pb-4 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumb items={[{ label: "Contact" }]} />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+      <section className="pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">

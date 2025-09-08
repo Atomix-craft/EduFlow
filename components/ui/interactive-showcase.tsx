@@ -15,7 +15,7 @@ const features: Feature[] = [
   {
     id: 'admin',
     name: 'Admin Dashboard',
-    image: '/admin-dash.png',
+    image: '/admin-dashboard.png',
     description: 'Comprehensive overview of academic operations, system analytics, and management tools.',
     features: [
       'Academic structure & curriculum management',
@@ -69,7 +69,7 @@ const features: Feature[] = [
   {
     id: 'timetable',
     name: 'Timetable Management',
-    image: '/attandance.png',
+    image: '/admin.png',
     description: 'Automated scheduling with conflict resolution and optimization algorithms.',
     features: [
       'Automated timetable generation',
@@ -105,7 +105,7 @@ const features: Feature[] = [
   {
     id: 'analytics',
     name: 'LMS Reports',
-    image: '/LMS-reports.png',
+    image: '/lms-reports.png',
     description: 'Comprehensive insights and reporting for data-driven decision making.',
     features: [
       'Performance analytics & trends',
@@ -173,10 +173,11 @@ export function InteractiveShowcase() {
             <div className="relative rounded-2xl overflow-hidden">
               {/* Background Blurred Image */}
               <div 
-                className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110 transition-all duration-700 ease-in-out min-h-96"
+                className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110 transition-all duration-1000 ease-in-out min-h-96 opacity-30"
                 style={{ 
                   backgroundImage: `url(${activeFeature.image})`,
-                  transition: 'background-image 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
+                  transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)',
+                  transform: 'scale(1.1) rotate(1deg)'
                 }}
               ></div>
               
@@ -206,14 +207,15 @@ export function InteractiveShowcase() {
                         <img 
                           src={activeFeature.image} 
                           alt={activeFeature.name}
-                          className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-700 ease-in-out"
+                          className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-700 ease-in-out hover:scale-105"
                           style={{ 
                             maxHeight: '600px', 
-                            objectFit: activeFeature.id === 'analytics' ? 'contain' : 'cover',
-                            objectPosition: activeFeature.id === 'analytics' ? 'center' : 'top left',
-                            transform: activeFeature.id === 'analytics' ? 'scale(1)' : 'scale(1.4)',
-                            transformOrigin: 'top left',
-                            transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
+                            objectFit: 'contain',
+                            objectPosition: 'center',
+                            transform: 'scale(1)',
+                            transformOrigin: 'center',
+                            transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+                            filter: 'drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1))'
                           }}
                           onError={() => setImageError(activeFeature.image)}
                           onLoad={() => setImageError(null)}

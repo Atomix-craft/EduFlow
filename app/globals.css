@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Critical CSS - inline for faster rendering */
+
 :root {
   --background: #ffffff;
   --foreground: #1a1a1a;

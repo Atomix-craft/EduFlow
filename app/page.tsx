@@ -1,5 +1,10 @@
-import { InteractiveShowcase } from "@/components/ui/interactive-showcase"
 import { Navigation } from "@/components/ui/navigation"
+import dynamic from 'next/dynamic'
+
+// Lazy load the interactive showcase to reduce initial bundle size
+const InteractiveShowcase = dynamic(() => import("@/components/ui/interactive-showcase").then(mod => ({ default: mod.InteractiveShowcase })), {
+  loading: () => <div className="bg-white py-20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><div className="animate-pulse">Loading showcase...</div></div></div>
+})
 
 export default function Home() {
   return (

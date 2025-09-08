@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 interface Feature {
   id: string;
@@ -126,6 +126,21 @@ export function InteractiveShowcase() {
   const [activeFeature, setActiveFeature] = useState(features[0]);
   const [imageError, setImageError] = useState<string | null>(null);
 
+  const handleFeatureChange = useCallback((feature: Feature) => {
+    setActiveFeature(feature);
+    setImageError(null);
+  }, []);
+
+  const handleImageError = useCallback((imageSrc: string) => {
+    setImageError(imageSrc);
+  }, []);
+
+  const handleImageLoad = useCallback(() => {
+    setImageError(null);
+  }, []);
+
+  const memoizedFeatures = useMemo(() => features, []);
+
   return (
     <div className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,13 +159,10 @@ export function InteractiveShowcase() {
           {/* Feature Navigation */}
           <div className="lg:col-span-1">
             <div className="space-y-2">
-              {features.map((feature) => (
+              {memoizedFeatures.map((feature) => (
                 <button
                   key={feature.id}
-                  onClick={() => {
-                    setActiveFeature(feature);
-                    setImageError(null);
-                  }}
+                  onClick={() => handleFeatureChange(feature)}
                   className={`w-full text-left p-4 rounded-lg transition-all duration-300 ${
                     activeFeature.id === feature.id
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg transform scale-105'
@@ -208,6 +220,8 @@ export function InteractiveShowcase() {
                           src={activeFeature.image} 
                           alt={`${activeFeature.name} - CampusHub University Management System`}
                           className="w-full max-w-4xl mx-auto rounded-xl transition-all duration-700 ease-in-out hover:scale-105"
+                          width={1200}
+                          height={600}
                           style={{ 
                             maxHeight: '600px', 
                             objectFit: 'contain',
@@ -219,8 +233,8 @@ export function InteractiveShowcase() {
                           }}
                           loading="lazy"
                           decoding="async"
-                          onError={() => setImageError(activeFeature.image)}
-                          onLoad={() => setImageError(null)}
+                          onError={() => handleImageError(activeFeature.image)}
+                          onLoad={handleImageLoad}
                         />
                       )}
                       

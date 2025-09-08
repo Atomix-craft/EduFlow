@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EduFLow - Education Management Software",
+  title: "CampusHub - Education Management Software",
   description: "Comprehensive education management system with admin, student, and teacher portals. Streamline academic operations, curriculum management, and student lifecycle.",
 };
 

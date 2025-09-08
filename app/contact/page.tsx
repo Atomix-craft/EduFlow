@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">EduFLow</a>
+                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
               </div>
             </div>
             <div className="hidden md:block">
@@ -43,7 +43,7 @@ export default function Contact() {
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Ready to transform your education management? Contact our team to learn more about EduFLow and how it can benefit your institution.
+              Ready to transform your education management? Contact our team to learn more about CampusHub and how it can benefit your institution.
             </p>
           </div>
         </div>
@@ -164,8 +164,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">contact@eduflow.com</p>
-                    <p className="text-gray-600">support@eduflow.com</p>
+                    <p className="text-gray-600">contact@campushub.com</p>
+                    <p className="text-gray-600">support@campushub.com</p>
                   </div>
                 </div>
 
@@ -231,14 +231,14 @@ export default function Contact() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Quick answers to common questions about EduFLow
+              Quick answers to common questions about CampusHub
             </p>
           </div>
 
           <div className="space-y-6">
             {/* FAQ Item 1 */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">How quickly can we get started with EduFLow?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">How quickly can we get started with CampusHub?</h3>
               <p className="text-gray-600">
                 Most institutions can be up and running within 2-4 weeks, depending on the complexity of your setup and data migration requirements. Our team will work closely with you to ensure a smooth transition.
               </p>
@@ -254,9 +254,9 @@ export default function Contact() {
 
             {/* FAQ Item 3 */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can EduFLow integrate with our existing systems?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can CampusHub integrate with our existing systems?</h3>
               <p className="text-gray-600">
-                Absolutely. EduFLow offers robust API integration capabilities and can connect with most existing educational and administrative systems including SIS, LMS, and HR systems.
+                Absolutely. CampusHub offers robust API integration capabilities and can connect with most existing educational and administrative systems including SIS, LMS, and HR systems.
               </p>
             </div>
 
@@ -270,17 +270,17 @@ export default function Contact() {
 
             {/* FAQ Item 5 */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is my data secure with EduFLow?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Is my data secure with CampusHub?</h3>
               <p className="text-gray-600">
-                Yes, we take data security very seriously. EduFLow uses enterprise-grade encryption, complies with GDPR and other privacy regulations, and undergoes regular security audits.
+                Yes, we take data security very seriously. CampusHub uses enterprise-grade encryption, complies with GDPR and other privacy regulations, and undergoes regular security audits.
               </p>
             </div>
 
             {/* FAQ Item 6 */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I customize EduFLow for my institution's needs?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I customize CampusHub for my institution's needs?</h3>
               <p className="text-gray-600">
-                Absolutely! EduFLow is highly customizable and can be tailored to meet your specific institutional requirements, workflows, and branding needs.
+                Absolutely! CampusHub is highly customizable and can be tailored to meet your specific institutional requirements, workflows, and branding needs.
               </p>
             </div>
           </div>
@@ -294,7 +294,7 @@ export default function Contact() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join hundreds of educational institutions already using EduFLow to streamline their operations.
+            Join hundreds of educational institutions already using CampusHub to streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/pricing" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
@@ -312,7 +312,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">EduFLow</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">CampusHub</h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Comprehensive education management system designed to streamline academic operations, 
                 enhance student experience, and empower educators with powerful tools.
@@ -358,7 +358,7 @@ export default function Contact() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduFLow. All rights reserved.</p>
+            <p>&copy; 2024 CampusHub. All rights reserved.</p>
           </div>
         </div>
       </footer>

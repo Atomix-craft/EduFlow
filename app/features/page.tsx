@@ -7,7 +7,7 @@ export default function Features() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">EduFLow</a>
+                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
               </div>
             </div>
             <div className="hidden md:block">
@@ -379,7 +379,7 @@ export default function Features() {
             Ready to Experience These Features?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Start your free trial today and discover how EduFLow can transform your educational institution.
+            Start your free trial today and discover how CampusHub can transform your educational institution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
@@ -397,7 +397,7 @@ export default function Features() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">EduFLow</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">CampusHub</h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Comprehensive education management system designed to streamline academic operations, 
                 enhance student experience, and empower educators with powerful tools.
@@ -423,7 +423,7 @@ export default function Features() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduFLow. All rights reserved.</p>
+            <p>&copy; 2024 CampusHub. All rights reserved.</p>
           </div>
         </div>
       </footer>

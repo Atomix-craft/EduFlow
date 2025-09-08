@@ -7,7 +7,7 @@ export default function Help() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">EduFLow</a>
+                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
               </div>
             </div>
             <div className="hidden md:block">
@@ -39,7 +39,7 @@ export default function Help() {
               <span className="gradient-text block">Center</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions, access documentation, and get the support you need to make the most of EduFLow.
+              Find answers to common questions, access documentation, and get the support you need to make the most of CampusHub.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function Help() {
           <div className="space-y-6">
             {/* FAQ Item 1 */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">How do I get started with EduFLow?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">How do I get started with CampusHub?</h3>
               <p className="text-gray-600">
                 Getting started is easy! After signing up, you'll receive a welcome email with setup instructions. 
                 Our onboarding wizard will guide you through the initial configuration, including setting up your institution details, 
@@ -130,7 +130,7 @@ export default function Help() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">What are the system requirements?</h3>
               <p className="text-gray-600">
-                EduFLow is a cloud-based solution that works on any modern web browser including Chrome, Firefox, Safari, and Edge. 
+                CampusHub is a cloud-based solution that works on any modern web browser including Chrome, Firefox, Safari, and Edge. 
                 No software installation is required. For mobile access, we provide native apps for iOS and Android devices.
               </p>
             </div>
@@ -168,7 +168,7 @@ export default function Help() {
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">How do I customize the system for my institution?</h3>
               <p className="text-gray-600">
-                EduFLow is highly customizable to match your institution's specific needs. You can customize academic structures, 
+                CampusHub is highly customizable to match your institution's specific needs. You can customize academic structures, 
                 grading systems, report formats, and user interfaces. Our team can also help with advanced customizations 
                 based on your requirements.
               </p>
@@ -194,8 +194,8 @@ export default function Help() {
               <p className="text-gray-600 mb-6">
                 Get detailed help via email. Our support team typically responds within 24 hours.
               </p>
-              <a href="mailto:support@eduflow.com" className="text-purple-600 hover:text-purple-700 font-semibold">
-                support@eduflow.com
+              <a href="mailto:support@campushub.com" className="text-purple-600 hover:text-purple-700 font-semibold">
+                support@campushub.com
               </a>
             </div>
 
@@ -289,7 +289,7 @@ export default function Help() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">EduFLow</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">CampusHub</h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Comprehensive education management system designed to streamline academic operations, 
                 enhance student experience, and empower educators with powerful tools.
@@ -335,7 +335,7 @@ export default function Help() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduFLow. All rights reserved.</p>
+            <p>&copy; 2024 CampusHub. All rights reserved.</p>
           </div>
         </div>
       </footer>

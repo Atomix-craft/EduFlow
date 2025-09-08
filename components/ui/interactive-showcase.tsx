@@ -132,7 +132,7 @@ export function InteractiveShowcase() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            See EduFLow in Action
+            See CampusHub in Action
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Explore the intuitive interface and powerful features that make education management effortless.
@@ -279,7 +279,7 @@ export function InteractiveShowcase() {
               Want to See More?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              These are just a few highlights of EduFLow's powerful interface. 
+              These are just a few highlights of CampusHub's powerful interface. 
               Schedule a personalized demo to explore all features in detail.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

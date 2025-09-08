@@ -9,7 +9,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold gradient-text">EduFLow</h1>
+                <h1 className="text-2xl font-bold gradient-text">CampusHub</h1>
               </div>
             </div>
             <div className="hidden md:block">
@@ -65,7 +65,7 @@ export default function Home() {
                     <p className="text-sm opacity-90">Replace with your actual video</p>
                   </div>
                 </div>
-                <p className="text-purple-700 text-sm">Upload your EduFLow demonstration video here</p>
+                <p className="text-purple-700 text-sm">Upload your CampusHub demonstration video here</p>
               </div>
             </div>
           </div>
@@ -96,12 +96,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose EduFLow Section */}
+      {/* Why Choose CampusHub Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose EduFLow?
+              Why Choose CampusHub?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Built specifically for modern educational institutions with cutting-edge technology and user-centric design.
@@ -192,7 +192,7 @@ export default function Home() {
               Everything You Need to Manage Education
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From curriculum management to student lifecycle, EduFLow provides comprehensive tools for modern education institutions.
+              From curriculum management to student lifecycle, CampusHub provides comprehensive tools for modern education institutions.
             </p>
           </div>
 
@@ -414,7 +414,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose EduFLow for Your Institution?
+              Why Choose CampusHub for Your Institution?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Be among the first to experience the next generation of education management technology.
@@ -468,7 +468,7 @@ export default function Home() {
             Ready to Transform Your Education Management?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Join hundreds of educational institutions already using EduFLow to streamline their operations.
+            Join hundreds of educational institutions already using CampusHub to streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
@@ -486,7 +486,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">EduFLow</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">CampusHub</h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Comprehensive education management system designed to streamline academic operations, 
                 enhance student experience, and empower educators with powerful tools.
@@ -532,7 +532,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduFLow. All rights reserved.</p>
+            <p>&copy; 2024 CampusHub. All rights reserved.</p>
           </div>
         </div>
       </footer>

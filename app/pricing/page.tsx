@@ -7,7 +7,7 @@ export default function Pricing() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">EduFLow</a>
+                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
               </div>
             </div>
             <div className="hidden md:block">
@@ -201,7 +201,7 @@ export default function Pricing() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">
-              Everything you need to know about EduFLow pricing and features.
+              Everything you need to know about CampusHub pricing and features.
             </p>
           </div>
 
@@ -262,7 +262,7 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">EduFLow</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">CampusHub</h3>
               <p className="text-gray-400 mb-6 max-w-md">
                 Comprehensive education management system designed to streamline academic operations, 
                 enhance student experience, and empower educators with powerful tools.
@@ -288,7 +288,7 @@ export default function Pricing() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 EduFLow. All rights reserved.</p>
+            <p>&copy; 2024 CampusHub. All rights reserved.</p>
           </div>
         </div>
       </footer>

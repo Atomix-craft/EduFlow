@@ -1,34 +1,9 @@
+import { Navigation } from "@/components/ui/navigation"
+
 export default function Screenshots() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                <a href="/screenshots" className="text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Screenshots</a>
-                <a href="/pricing" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
-                <a href="/help" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Help</a>
-                <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-              </div>
-            </div>
-            <div className="md:hidden">
-              <button className="text-gray-700 hover:text-purple-600">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="screenshots" />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
@@ -213,12 +188,12 @@ export default function Screenshots() {
                 Schedule a personalized demo to explore all features in detail.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
+                <a href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
                   Schedule Demo
-                </button>
-                <button className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                </a>
+                <a href="/CampusHub.pdf" download="CampusHub-Brochure.pdf" className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                   Download Brochure
-                </button>
+                </a>
               </div>
             </div>
           </div>

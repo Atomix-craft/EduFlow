@@ -1,79 +1,115 @@
 import { InteractiveShowcase } from "@/components/ui/interactive-showcase"
+import { Navigation } from "@/components/ui/navigation"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold gradient-text">CampusHub</h1>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                <a href="#screenshots" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Screenshots</a>
-                <a href="/pricing" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
-                <a href="/help" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Help</a>
-                <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-              </div>
-            </div>
-            <div className="md:hidden">
-              <button className="text-gray-700 hover:text-purple-600">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Streamline Your
-                <span className="gradient-text block">Education Management</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Comprehensive education management system with admin, student, and teacher portals. 
-                Manage curriculum, admissions, examinations, and student lifecycle with ease.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl">
-                  Get Started Free
-                </button>
-                <button className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                  Watch Demo
-                </button>
-              </div>
+      <section className="pt-20 pb-20 bg-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50/30 via-transparent to-indigo-50/30"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Main Headline */}
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              The everything platform
+              <span className="gradient-text block">for education</span>
+            </h1>
+            
+            {/* Subheadline */}
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              One platform for students, teachers, and administrators. Manage admissions, curriculum, 
+              examinations, and student lifecycle—all in one place.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Start Free Trial →
+              </a>
+              <a href="/contact" className="border border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold py-4 px-8 rounded-lg transition-colors">
+                Contact Sales
+              </a>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-purple-200 to-purple-300 rounded-2xl p-8 text-center">
-                <div className="w-full h-80 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-center text-white">
-                    <svg className="w-20 h-20 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    <p className="text-lg font-medium">Product Demo Video</p>
-                    <p className="text-sm opacity-90">Replace with your actual video</p>
+            
+            {/* Trial Badge */}
+            <p className="text-gray-500 text-sm mb-16">Start your 14-day free trial today.</p>
+            
+            {/* Application Preview */}
+            <div className="relative max-w-5xl mx-auto">
+              <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                <div className="bg-gray-100 px-4 py-3 flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <div className="ml-4 text-sm text-gray-600">CampusHub Dashboard</div>
+                </div>
+                <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Admin Panel Preview */}
+                    <div className="bg-white rounded-lg p-4 shadow-sm border">
+                      <div className="flex items-center mb-3">
+                        <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                          <svg className="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                        </div>
+                        <h3 className="font-semibold text-gray-900">Admin Portal</h3>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-200 rounded w-3/4"></div>
+                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                        <div className="h-2 bg-purple-200 rounded w-2/3"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Student Portal Preview */}
+                    <div className="bg-white rounded-lg p-4 shadow-sm border">
+                      <div className="flex items-center mb-3">
+                        <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                          <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                          </svg>
+                        </div>
+                        <h3 className="font-semibold text-gray-900">Student Portal</h3>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                        <div className="h-2 bg-blue-200 rounded w-3/4"></div>
+                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                      </div>
+                    </div>
+                    
+                    {/* Teacher Portal Preview */}
+                    <div className="bg-white rounded-lg p-4 shadow-sm border">
+                      <div className="flex items-center mb-3">
+                        <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                          <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                          </svg>
+                        </div>
+                        <h3 className="font-semibold text-gray-900">Teacher Portal</h3>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="h-2 bg-green-200 rounded w-3/4"></div>
+                        <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+                        <div className="h-2 bg-gray-200 rounded w-1/2"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p className="text-purple-700 text-sm">Upload your CampusHub demonstration video here</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="p-6">
@@ -91,6 +127,71 @@ export default function Home() {
             <div className="p-6">
               <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">100%</div>
               <div className="text-gray-600 text-lg">Mobile Responsive</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Overview Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Everything your institution needs
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              CampusHub's comprehensive platform handles every aspect of education management. 
+              And we never stop innovating.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Feature Card 1 */}
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">AI-Powered Analytics</h3>
+                <p className="text-purple-100 text-lg leading-relaxed">
+                  Get insights faster with intelligent reporting and predictive analytics for student performance and institutional growth.
+                </p>
+              </div>
+            </div>
+            
+            {/* Feature Card 2 */}
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Unified Dashboard</h3>
+                <p className="text-blue-100 text-lg leading-relaxed">
+                  Instantly switch between student, teacher, and admin views. One platform, multiple perspectives, seamless experience.
+                </p>
+              </div>
+            </div>
+            
+            {/* Feature Card 3 */}
+            <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Customize Everything</h3>
+                <p className="text-indigo-100 text-lg leading-relaxed">
+                  Configure CampusHub for different workflows, academic structures, and institutional needs with just a few clicks.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -471,12 +572,12 @@ export default function Home() {
             Join hundreds of educational institutions already using CampusHub to streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
+            <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
               Start Free Trial
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
               Schedule Demo
-            </button>
+            </a>
           </div>
         </div>
       </section>

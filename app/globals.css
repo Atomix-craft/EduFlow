@@ -24,14 +24,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --secondary: #1f2937;
-    --text-muted: #9ca3af;
-  }
-}
+/* Dark mode styles removed to prevent hydration mismatch */
+/* If dark mode is needed, implement it using a client-side theme provider */
 
 body {
   background: var(--background);

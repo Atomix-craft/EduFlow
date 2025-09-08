@@ -1,27 +1,9 @@
+import { Navigation } from "@/components/ui/navigation"
+
 export default function Features() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/features" className="text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                <a href="/#screenshots" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Screenshots</a>
-                <a href="/pricing" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
-                <a href="/help" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Help</a>
-                <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="features" />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
@@ -382,12 +364,12 @@ export default function Features() {
             Start your free trial today and discover how CampusHub can transform your educational institution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
+            <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
               Start Free Trial
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
               Schedule Demo
-            </button>
+            </a>
           </div>
         </div>
       </section>

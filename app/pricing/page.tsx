@@ -1,27 +1,9 @@
+import { Navigation } from "@/components/ui/navigation"
+
 export default function Pricing() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <a href="/" className="text-2xl font-bold gradient-text">CampusHub</a>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/features" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                <a href="/#screenshots" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Screenshots</a>
-                <a href="/pricing" className="text-purple-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
-                <a href="/help" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Help</a>
-                <a href="/contact" className="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="pricing" />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-br from-purple-50 to-indigo-50">
@@ -80,9 +62,9 @@ export default function Pricing() {
                   <span className="text-gray-700">Basic Reporting & Analytics</span>
                 </li>
               </ul>
-              <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors">
+              <a href="/contact" className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors block text-center">
                 Contact Administrator
-              </button>
+              </a>
             </div>
 
             {/* Professional Plan */}
@@ -134,9 +116,9 @@ export default function Pricing() {
                   <span className="text-gray-700">API Access & Integrations</span>
                 </li>
               </ul>
-              <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+              <a href="/contact" className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors block text-center">
                 Contact Administrator
-              </button>
+              </a>
             </div>
 
             {/* Enterprise Plan */}
@@ -185,9 +167,9 @@ export default function Pricing() {
                   <span className="text-gray-700">On-Premise Deployment</span>
                 </li>
               </ul>
-              <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors">
+              <a href="/contact" className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg transition-colors block text-center">
                 Contact Administrator
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -247,12 +229,12 @@ export default function Pricing() {
             Contact our team to discuss your specific needs and get a customized quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
+            <a href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
               Contact Sales Team
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-semibold py-3 px-8 rounded-lg transition-colors">
               Start Free Trial
-            </button>
+            </a>
           </div>
         </div>
       </section>

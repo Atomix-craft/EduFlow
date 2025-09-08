@@ -283,12 +283,12 @@ export function InteractiveShowcase() {
               Schedule a personalized demo to explore all features in detail.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
+              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg">
                 Schedule Demo
-              </button>
-              <button className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              </a>
+              <a href="/CampusHub.pdf" download="CampusHub-Brochure.pdf" className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Download Brochure
-              </button>
+              </a>
             </div>
           </div>
         </div>

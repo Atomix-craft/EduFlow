@@ -11,12 +11,13 @@ export function Navigation({ currentPage }: NavigationProps) {
 
   const navItems = [
     { href: "/features", label: "Features" },
-    { href: "/#screenshots", label: "Gallery" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/help", label: "Help" },
+    { href: "/blog", label: "Blog" },
+    { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" }
   ]
+
+  const demoItem = { href: "/demo", label: "Live Demo", external: false }
 
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50" role="navigation" aria-label="Main navigation">
@@ -44,6 +45,15 @@ export function Navigation({ currentPage }: NavigationProps) {
                   {item.label}
                 </a>
               ))}
+              <a 
+                href={demoItem.href}
+                className="px-4 py-2 rounded-md text-sm font-medium bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center"
+              >
+                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                {demoItem.label}
+              </a>
             </div>
           </div>
           <div className="md:hidden">
@@ -84,6 +94,16 @@ export function Navigation({ currentPage }: NavigationProps) {
                   {item.label}
                 </a>
               ))}
+              <a 
+                href={demoItem.href}
+                className="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                {demoItem.label}
+              </a>
             </div>
           </div>
         )}

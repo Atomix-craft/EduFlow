@@ -107,11 +107,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' }
+      { url: '/favicon.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/favicon.svg', sizes: '16x16', type: 'image/svg+xml' },
     ],
     apple: [
       { url: '/favicon.svg', sizes: '180x180', type: 'image/svg+xml' },
     ],
+    shortcut: '/favicon.svg',
   },
 };
 
@@ -176,7 +178,7 @@ export default function RootLayout({
       "@type": "Organization",
       "name": "CampusHub",
       "url": "https://campushub.com",
-      "logo": "https://campushub.com/favicon.svg",
+      "logo": "https://campushub.com/logowithoutbg.svg",
       "description": "Leading provider of university education management systems and campus automation solutions.",
       "foundingDate": "2024",
       "industry": "Educational Technology",
@@ -236,6 +238,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="preload" href="/admin-dashboard.png" as="image" type="image/png" />
         <link rel="preload" href="/student-portal.png" as="image" type="image/png" />
         <link rel="preload" href="/teacher-portal.png" as="image" type="image/png" />

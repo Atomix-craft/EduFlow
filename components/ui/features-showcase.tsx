@@ -126,9 +126,22 @@ const features: Feature[] = [
 
 export function FeaturesShowcase() {
   const [activeFeature, setActiveFeature] = useState(features[0]);
+  const [expandedFeatures, setExpandedFeatures] = useState<Set<string>>(new Set());
 
   const handleFeatureChange = useCallback((feature: Feature) => {
     setActiveFeature(feature);
+  }, []);
+
+  const toggleFeature = useCallback((featureId: string) => {
+    setExpandedFeatures(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(featureId)) {
+        newSet.delete(featureId);
+      } else {
+        newSet.add(featureId);
+      }
+      return newSet;
+    });
   }, []);
 
   return (
@@ -150,8 +163,8 @@ export function FeaturesShowcase() {
           </p>
         </div>
 
-        {/* Main Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        {/* Desktop Layout - Original Side-by-Side */}
+        <div className="hidden lg:grid lg:grid-cols-5 gap-8">
           {/* Feature Navigation */}
           <div className="lg:col-span-2">
             <div className="space-y-3">
@@ -288,6 +301,146 @@ export function FeaturesShowcase() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout - Accordion Style */}
+        <div className="lg:hidden max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {features.map((feature, index) => {
+              const isExpanded = expandedFeatures.has(feature.id);
+              
+              return (
+                <div
+                  key={feature.id}
+                  className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl"
+                >
+                  {/* Feature Header - Always Visible */}
+                  <button
+                    onClick={() => toggleFeature(feature.id)}
+                    className="w-full text-left p-4 sm:p-6 transition-all duration-300 hover:bg-gray-50"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center text-xl sm:text-2xl transition-all duration-300 ${
+                          isExpanded 
+                            ? `bg-gradient-to-br ${feature.gradient} shadow-lg` 
+                            : 'bg-gray-100'
+                        }`}>
+                          {feature.icon}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className={`text-lg sm:text-xl font-bold mb-1 transition-colors ${
+                            isExpanded ? 'text-gray-900' : 'text-gray-700'
+                          }`}>
+                            {feature.title}
+                          </h3>
+                          <p className={`text-sm sm:text-base transition-colors ${
+                            isExpanded ? 'text-gray-600' : 'text-gray-500'
+                          }`}>
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                      <div className={`transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
+                        <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </button>
+
+                  {/* Feature Details - Collapsible */}
+                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="border-t border-gray-100">
+                      {/* Feature Header */}
+                      <div className={`bg-gradient-to-r ${feature.gradient} p-4 sm:p-6 text-white`}>
+                        <div className="flex items-center space-x-3 sm:space-x-4">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl backdrop-blur-sm">
+                            {feature.icon}
+                          </div>
+                          <div>
+                            <h3 className="text-xl sm:text-2xl font-bold mb-1">{feature.title}</h3>
+                            <p className="text-white/90 text-sm sm:text-base">{feature.description}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Features List */}
+                      <div className="p-4 sm:p-6">
+                        <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Key Capabilities</h4>
+                        <div className="space-y-2 sm:space-y-3">
+                          {feature.features.map((featureItem, featureIndex) => {
+                            const isComingSoon = featureItem.includes('(Coming Soon)');
+                            const featureText = featureItem.replace('(Coming Soon)', '').trim();
+                            
+                            return (
+                              <div 
+                                key={featureIndex}
+                                className={`flex items-start space-x-2 sm:space-x-3 p-3 sm:p-4 rounded-lg sm:rounded-xl transition-colors duration-300 ${
+                                  isComingSoon 
+                                    ? 'bg-orange-50 border border-orange-200 hover:bg-orange-100' 
+                                    : 'bg-gray-50 hover:bg-gray-100'
+                                }`}
+                                style={{
+                                  animationDelay: `${featureIndex * 50}ms`,
+                                  animation: isExpanded ? 'fadeInUp 0.6s ease-out forwards' : 'none'
+                                }}
+                              >
+                                <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                                  isComingSoon 
+                                    ? 'bg-gradient-to-br from-orange-500 to-yellow-500' 
+                                    : `bg-gradient-to-br ${feature.gradient}`
+                                }`}>
+                                  {isComingSoon ? (
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                                    </svg>
+                                  ) : (
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                  )}
+                                </div>
+                                <div className="flex-1">
+                                  <span className={`text-sm sm:text-base font-medium ${
+                                    isComingSoon ? 'text-orange-800' : 'text-gray-700'
+                                  }`}>
+                                    {featureText}
+                                  </span>
+                                  {isComingSoon && (
+                                    <div className="inline-flex items-center ml-2 px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">
+                                      Coming Soon
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Bottom CTA */}
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-200">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
+                            <div>
+                              <h5 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">Ready to explore {feature.title}?</h5>
+                              <p className="text-xs sm:text-sm text-gray-600">See how this feature can transform your institution</p>
+                            </div>
+                            <button className={`bg-gradient-to-r ${feature.gradient} text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base`}>
+                              Learn More
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -1,0 +1,146 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#gradient1)"/>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:0.1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B" />
+      <stop offset="100%" style="stop-color:#EF4444" />
+    </linearGradient>
+    <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Calculator Device -->
+  <g transform="translate(150, 50)">
+    <!-- Calculator Body -->
+    <rect x="0" y="0" width="100" height="140" rx="12" fill="white" stroke="url(#gradient2)" stroke-width="3"/>
+    
+    <!-- Screen -->
+    <rect x="10" y="10" width="80" height="25" rx="6" fill="#1F2937"/>
+    <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#10B981">$125,000</text>
+    
+    <!-- Buttons Grid -->
+    <g transform="translate(10, 45)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="9" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">C</text>
+      
+      <rect x="21" y="0" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="30" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">±</text>
+      
+      <rect x="42" y="0" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="51" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">%</text>
+      
+      <rect x="63" y="0" width="18" height="18" rx="3" fill="url(#gradient2)"/>
+      <text x="72" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">÷</text>
+      
+      <!-- Row 2 -->
+      <rect x="0" y="21" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="9" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">7</text>
+      
+      <rect x="21" y="21" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="30" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">8</text>
+      
+      <rect x="42" y="21" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="51" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">9</text>
+      
+      <rect x="63" y="21" width="18" height="18" rx="3" fill="url(#gradient2)"/>
+      <text x="72" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">×</text>
+      
+      <!-- Row 3 -->
+      <rect x="0" y="42" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="9" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">4</text>
+      
+      <rect x="21" y="42" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="30" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">5</text>
+      
+      <rect x="42" y="42" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="51" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">6</text>
+      
+      <rect x="63" y="42" width="18" height="18" rx="3" fill="url(#gradient2)"/>
+      <text x="72" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">-</text>
+      
+      <!-- Row 4 -->
+      <rect x="0" y="63" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="9" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">1</text>
+      
+      <rect x="21" y="63" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="30" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">2</text>
+      
+      <rect x="42" y="63" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="51" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">3</text>
+      
+      <rect x="63" y="63" width="18" height="18" rx="3" fill="url(#gradient2)"/>
+      <text x="72" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">+</text>
+      
+      <!-- Row 5 -->
+      <rect x="0" y="84" width="40" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="20" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">0</text>
+      
+      <rect x="42" y="84" width="18" height="18" rx="3" fill="#F3F4F6"/>
+      <text x="51" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">.</text>
+      
+      <rect x="63" y="84" width="18" height="18" rx="3" fill="url(#gradient3)"/>
+      <text x="72" y="96" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">=</text>
+    </g>
+  </g>
+  
+  <!-- ROI Chart -->
+  <g transform="translate(50, 50)">
+    <!-- Chart Background -->
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+    
+    <!-- Chart Bars -->
+    <rect x="10" y="40" width="12" height="15" fill="#EF4444"/>
+    <rect x="25" y="35" width="12" height="20" fill="#F59E0B"/>
+    <rect x="40" y="25" width="12" height="30" fill="#10B981"/>
+    <rect x="55" y="15" width="12" height="40" fill="#3B82F6"/>
+    
+    <!-- Chart Labels -->
+    <text x="16" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">Y1</text>
+    <text x="31" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">Y2</text>
+    <text x="46" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">Y3</text>
+    <text x="61" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#6B7280">Y4</text>
+  </g>
+  
+  <!-- Money Icons -->
+  <g transform="translate(50, 120)">
+    <!-- Dollar Sign -->
+    <circle cx="15" cy="15" r="12" fill="url(#gradient3)"/>
+    <text x="15" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">$</text>
+    
+    <!-- Growth Arrow -->
+    <path d="M35 10 L45 5 L45 15 L55 10 L50 20 L40 15 L40 5 Z" fill="url(#gradient3)"/>
+  </g>
+  
+  <!-- ROI Text -->
+  <g transform="translate(50, 200)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#374151">ROI Calculator</text>
+    <text x="0" y="18" font-family="Arial, sans-serif" font-size="12" fill="#6B7280">Measure Your Investment Returns</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#10B981">Expected ROI: 300%+</text>
+  </g>
+  
+  <!-- Cost vs Savings -->
+  <g transform="translate(280, 120)">
+    <!-- Cost -->
+    <rect x="0" y="0" width="60" height="30" rx="6" fill="#FEE2E2" stroke="#EF4444" stroke-width="1"/>
+    <text x="30" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#EF4444">Cost</text>
+    <text x="30" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#EF4444">$50,000</text>
+    
+    <!-- Arrow -->
+    <path d="M30 35 L30 45 L25 40 L35 40 Z" fill="#6B7280"/>
+    
+    <!-- Savings -->
+    <rect x="0" y="50" width="60" height="30" rx="6" fill="#D1FAE5" stroke="#10B981" stroke-width="1"/>
+    <text x="30" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#10B981">Savings</text>
+    <text x="30" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#10B981">$175,000</text>
+  </g>
+</svg>

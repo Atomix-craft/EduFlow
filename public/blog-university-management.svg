@@ -1,0 +1,49 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F8FAFC"/>
+  
+  <!-- Building/University -->
+  <rect x="50" y="120" width="300" height="150" fill="#6366F1" rx="8"/>
+  <rect x="70" y="100" width="260" height="170" fill="#4F46E5" rx="8"/>
+  
+  <!-- Windows -->
+  <rect x="90" y="130" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="150" y="130" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="210" y="130" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="270" y="130" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  
+  <rect x="90" y="180" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="150" y="180" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="210" y="180" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  <rect x="270" y="180" width="40" height="30" fill="#E0E7FF" rx="4"/>
+  
+  <!-- Door -->
+  <rect x="180" y="200" width="40" height="70" fill="#1F2937" rx="4"/>
+  <circle cx="210" cy="235" r="3" fill="#F3F4F6"/>
+  
+  <!-- Flag -->
+  <line x1="200" y1="100" x2="200" y2="80" stroke="#1F2937" stroke-width="2"/>
+  <rect x="200" y="80" width="30" height="20" fill="#EF4444"/>
+  
+  <!-- Dashboard Elements -->
+  <rect x="320" y="50" width="60" height="40" fill="#10B981" rx="4"/>
+  <rect x="325" y="55" width="15" height="10" fill="white" rx="2"/>
+  <rect x="345" y="55" width="15" height="10" fill="white" rx="2"/>
+  <rect x="325" y="70" width="15" height="10" fill="white" rx="2"/>
+  <rect x="345" y="70" width="15" height="10" fill="white" rx="2"/>
+  
+  <!-- Chart -->
+  <rect x="20" y="50" width="60" height="40" fill="#F59E0B" rx="4"/>
+  <rect x="25" y="70" width="8" height="15" fill="white"/>
+  <rect x="35" y="65" width="8" height="20" fill="white"/>
+  <rect x="45" y="60" width="8" height="25" fill="white"/>
+  <rect x="55" y="55" width="8" height="30" fill="white"/>
+  <rect x="65" y="50" width="8" height="35" fill="white"/>
+  
+  <!-- Students -->
+  <circle cx="80" cy="40" r="8" fill="#8B5CF6"/>
+  <rect x="75" y="48" width="10" height="15" fill="#8B5CF6" rx="2"/>
+  
+  <circle cx="320" cy="40" r="8" fill="#EC4899"/>
+  <rect x="315" y="48" width="10" height="15" fill="#EC4899" rx="2"/>
+</svg>

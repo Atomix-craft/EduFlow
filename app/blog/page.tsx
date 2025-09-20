@@ -13,7 +13,7 @@ const blogPosts = [
     category: "Guides",
     readTime: "12 min read",
     date: "2024-01-15",
-    image: "/admin-dashboard.png",
+    image: "/blog-university-management.svg",
     slug: "complete-guide-university-management-systems"
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     category: "Selection",
     readTime: "8 min read",
     date: "2024-01-12",
-    image: "/student-portal.png",
+    image: "/blog-software-selection.svg",
     slug: "how-to-choose-best-education-management-software"
   },
   {
@@ -33,7 +33,7 @@ const blogPosts = [
     category: "Implementation",
     readTime: "15 min read",
     date: "2024-01-10",
-    image: "/teacher-portal.png",
+    image: "/blog-implementation-checklist.svg",
     slug: "university-management-system-implementation-checklist"
   },
   {
@@ -43,7 +43,7 @@ const blogPosts = [
     category: "Best Practices",
     readTime: "6 min read",
     date: "2024-01-08",
-    image: "/exam-management.png",
+    image: "/blog-best-practices.svg",
     slug: "top-10-mistakes-campus-management-software-implementation"
   },
   {
@@ -53,7 +53,7 @@ const blogPosts = [
     category: "Education",
     readTime: "7 min read",
     date: "2024-01-05",
-    image: "/lms-analytics.png",
+    image: "/blog-lms-vs-sis.svg",
     slug: "lms-vs-sis-difference-learning-student-information-systems"
   },
   {
@@ -63,7 +63,7 @@ const blogPosts = [
     category: "ROI",
     readTime: "10 min read",
     date: "2024-01-03",
-    image: "/admin-dashboard.png",
+    image: "/blog-roi-calculator.svg",
     slug: "university-management-software-roi-calculator"
   }
 ]

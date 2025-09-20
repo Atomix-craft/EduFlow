@@ -1,0 +1,51 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F8FAFC"/>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="#1E293B" font-size="16" font-weight="bold" font-family="Arial">LMS vs SIS Comparison</text>
+  
+  <!-- LMS Section -->
+  <rect x="40" y="60" width="140" height="180" rx="12" fill="white" stroke="#8B5CF6" stroke-width="3"/>
+  <rect x="50" y="70" width="120" height="8" rx="4" fill="#8B5CF6"/>
+  <rect x="50" y="85" width="100" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="95" width="110" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="105" width="90" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="115" width="105" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="125" width="95" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="135" width="85" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="145" width="100" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="50" y="155" width="90" height="5" rx="2" fill="#E2E8F0"/>
+  
+  <text x="110" y="180" text-anchor="middle" fill="#8B5CF6" font-size="14" font-weight="bold" font-family="Arial">LMS</text>
+  <text x="110" y="200" text-anchor="middle" fill="#64748B" font-size="10" font-family="Arial">Learning Management</text>
+  <text x="110" y="215" text-anchor="middle" fill="#64748B" font-size="10" font-family="Arial">System</text>
+  
+  <!-- VS Divider -->
+  <circle cx="200" cy="150" r="20" fill="#F59E0B"/>
+  <text x="200" y="156" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial">VS</text>
+  
+  <!-- SIS Section -->
+  <rect x="220" y="60" width="140" height="180" rx="12" fill="white" stroke="#10B981" stroke-width="3"/>
+  <rect x="230" y="70" width="120" height="8" rx="4" fill="#10B981"/>
+  <rect x="230" y="85" width="105" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="95" width="95" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="105" width="110" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="115" width="100" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="125" width="90" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="135" width="105" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="145" width="95" height="5" rx="2" fill="#E2E8F0"/>
+  <rect x="230" y="155" width="100" height="5" rx="2" fill="#E2E8F0"/>
+  
+  <text x="290" y="180" text-anchor="middle" fill="#10B981" font-size="14" font-weight="bold" font-family="Arial">SIS</text>
+  <text x="290" y="200" text-anchor="middle" fill="#64748B" font-size="10" font-family="Arial">Student Information</text>
+  <text x="290" y="215" text-anchor="middle" fill="#64748B" font-size="10" font-family="Arial">System</text>
+  
+  <!-- Feature Lists -->
+  <text x="40" y="260" fill="#8B5CF6" font-size="12" font-weight="bold" font-family="Arial">LMS Features:</text>
+  <text x="40" y="275" fill="#374151" font-size="10" font-family="Arial">• Course Content</text>
+  <text x="40" y="288" fill="#374151" font-size="10" font-family="Arial">• Assessments</text>
+  
+  <text x="220" y="260" fill="#10B981" font-size="12" font-weight="bold" font-family="Arial">SIS Features:</text>
+  <text x="220" y="275" fill="#374151" font-size="10" font-family="Arial">• Student Records</text>
+  <text x="220" y="288" fill="#374151" font-size="10" font-family="Arial">• Enrollment</text>
+</svg>

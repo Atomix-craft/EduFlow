@@ -1,0 +1,42 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#FEF3C7"/>
+  
+  <!-- Document -->
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+  
+  <!-- Header -->
+  <rect x="70" y="70" width="260" height="25" fill="#F59E0B" rx="4"/>
+  <text x="200" y="87" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial">Implementation Checklist</text>
+  
+  <!-- Checklist Items -->
+  <rect x="80" y="110" width="15" height="15" fill="#10B981" rx="3"/>
+  <path d="M83 117 L86 120 L92 114" stroke="white" stroke-width="2" fill="none"/>
+  <text x="105" y="122" fill="#374151" font-size="11" font-family="Arial">Project Planning</text>
+  
+  <rect x="80" y="135" width="15" height="15" fill="#10B981" rx="3"/>
+  <path d="M83 142 L86 145 L92 139" stroke="white" stroke-width="2" fill="none"/>
+  <text x="105" y="147" fill="#374151" font-size="11" font-family="Arial">System Design</text>
+  
+  <rect x="80" y="160" width="15" height="15" fill="#F59E0B" rx="3"/>
+  <text x="105" y="172" fill="#374151" font-size="11" font-family="Arial">Data Migration</text>
+  
+  <rect x="80" y="185" width="15" height="15" fill="#F59E0B" rx="3"/>
+  <text x="105" y="197" fill="#374151" font-size="11" font-family="Arial">User Training</text>
+  
+  <!-- Progress Bar -->
+  <rect x="70" y="220" width="260" height="6" fill="#E5E7EB" rx="3"/>
+  <rect x="70" y="220" width="130" height="6" fill="#10B981" rx="3"/>
+  <text x="200" y="240" text-anchor="middle" fill="#6B7280" font-size="9" font-family="Arial">50% Complete</text>
+  
+  <!-- Calendar -->
+  <rect x="320" y="20" width="50" height="35" fill="white" rx="4" stroke="#F59E0B" stroke-width="1"/>
+  <rect x="320" y="20" width="50" height="10" fill="#F59E0B" rx="4"/>
+  <text x="345" y="28" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="Arial">JAN</text>
+  <text x="345" y="45" text-anchor="middle" fill="#374151" font-size="12" font-weight="bold" font-family="Arial">15</text>
+  
+  <!-- Clock -->
+  <circle cx="320" cy="80" r="15" fill="white" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="320" y1="80" x2="320" y2="70" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="320" y1="80" x2="325" y2="80" stroke="#F59E0B" stroke-width="1"/>
+  <circle cx="320" cy="80" r="2" fill="#F59E0B"/>
+</svg>

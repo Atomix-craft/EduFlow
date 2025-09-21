@@ -177,8 +177,8 @@ export default function Help() {
               <p className="text-gray-600 mb-6">
                 Get detailed help via email. Our support team typically responds within 24 hours.
               </p>
-              <a href="mailto:support@campushub.com" className="text-purple-600 hover:text-purple-700 font-semibold">
-                support@campushub.com
+              <a href="mailto:founder@campus-hub.in" className="text-purple-600 hover:text-purple-700 font-semibold">
+                founder@campus-hub.in
               </a>
             </div>
 

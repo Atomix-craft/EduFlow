@@ -371,7 +371,7 @@ export function FeaturesShowcase() {
                       {/* Features List */}
                       <div className="p-4 sm:p-6">
                         <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Key Capabilities</h4>
-                        <div className="space-y-2 sm:space-y-3">
+                        <div className="space-y-2 sm:space-y-3 max-h-80 overflow-y-auto pr-2 features-scroll">
                           {feature.features.map((featureItem, featureIndex) => {
                             const isComingSoon = featureItem.includes('(Coming Soon)');
                             const featureText = featureItem.replace('(Coming Soon)', '').trim();
@@ -456,6 +456,25 @@ export function FeaturesShowcase() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        
+        /* Custom scrollbar for mobile features list */
+        .features-scroll::-webkit-scrollbar {
+          width: 4px;
+        }
+        
+        .features-scroll::-webkit-scrollbar-track {
+          background: #f1f5f9;
+          border-radius: 2px;
+        }
+        
+        .features-scroll::-webkit-scrollbar-thumb {
+          background: #cbd5e1;
+          border-radius: 2px;
+        }
+        
+        .features-scroll::-webkit-scrollbar-thumb:hover {
+          background: #94a3b8;
         }
       `}</style>
     </section>
